@@ -1,2 +1,2 @@
 language = "python"
-run = "python '4. Sorting/2.insertionSort.py'"
+run = "python '4. Sorting/3.qutickSort.py'"
