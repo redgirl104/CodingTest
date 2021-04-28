@@ -16,6 +16,52 @@
 풀이 :
    1. N, M 입력
    2. 배열 H 입력
-   3. 배열의 원소 중 최댓값을 기준으로 
+   3. 배열의 원소 중 최댓값을 기준으로 이진탐색
+      3-1. 잘린 길이와 M을 비교
+      3-2. 잘린 길이가 더 크면 오른쪽 구간에서 다시 이진탐색
+      3-3. 잘린 길이가 더 작으면 왼쪽 구간에서 다시 이진탐색
+      3-4. 위 과정을 반복
 
 """
+
+n, m = map(int, input().split(' '))
+h_list = list(map(int, input().split()))
+
+# def findMaxHeight(input_list, start, end, req_len):
+#   while(start <= end):
+#     mid = (start + end) // 2
+#     total = sum([i - mid for i in input_list])
+
+#     if total > req_len:
+#       start = mid + 1
+#     elif total < req_len:
+#       end = mid - 1
+#     else:
+#       return mid
+
+#     if total >= m:
+#       break
+#   return total
+    
+
+# total = findMaxHeight(h_list, 0, len(h_list)-1, m)
+# print(total)
+
+
+# 문제 답안
+start = 0
+end = max(h_list)
+result = 0
+while (start <= end):
+  total = 0
+  mid = (start + end) // 2
+  for x in h_list:
+    if x > mid :
+      total += x - mid  
+  if total < m:
+    end = mid -1
+  else:
+      result = mid
+      start = mid + 1
+
+print(result)

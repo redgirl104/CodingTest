@@ -1,2 +1,2 @@
 language = "python"
-run = "python '5.BinarySearch/1.binarySearch.py'"
+run = "python '6.DynamicProgramming/6.dp_exam_LIS.py'"
