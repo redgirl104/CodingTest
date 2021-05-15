@@ -1,2 +1,2 @@
 language = "python"
-run = "python '5.BinarySearch/1.binarySearch.py'"
+run = "python '9. codility/5.PermMissingElem.py'"
