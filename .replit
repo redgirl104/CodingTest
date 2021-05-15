@@ -1,2 +1,2 @@
 language = "python"
-run = "python '6.DynamicProgramming/6.dp_exam_LIS.py'"
+run = "python '9. codility/5.PermMissingElem.py'"
